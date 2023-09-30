@@ -189,6 +189,10 @@ body {
     margin-bottom: 5px;
 }
 
+.to-do-list textarea::placeholder {
+    font-size: 20px;
+}
+
 @media (max-width:767px) {
     .to-do-list textarea {
         width: calc(100% - 20px);
