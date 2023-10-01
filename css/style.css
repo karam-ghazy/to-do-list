@@ -89,6 +89,7 @@ body {
     }
 
     .container .to-do-list input[type="text"] {
+        border-right-color: #ccc;
         border-radius: 16px;
         -webkit-border-radius: 16px;
         -moz-border-radius: 16px;
