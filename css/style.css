@@ -82,6 +82,36 @@ body {
     -o-border-radius: 0 16px 16px 0;
 }
 
+@media(max-width:575px) {
+    .container .to-do-list .add {
+        flex-direction: column;
+        height: 60px;
+    }
+
+    .container .to-do-list input[type="text"] {
+        border-radius: 16px;
+        -webkit-border-radius: 16px;
+        -moz-border-radius: 16px;
+        -ms-border-radius: 16px;
+        -o-border-radius: 16px;
+        padding: 0 40px;
+    }
+
+    .container .to-do-list input[type="text"]::placeholder {
+        text-align: center;
+    }
+
+    .container .to-do-list input[type="button"] {
+        margin: 10px auto 0;
+        width: 40%;
+        border-radius: 16px;
+        -webkit-border-radius: 16px;
+        -moz-border-radius: 16px;
+        -ms-border-radius: 16px;
+        -o-border-radius: 16px;
+    }
+}
+
 .task {
     display: flex;
     justify-content: space-between;
@@ -103,6 +133,9 @@ body {
     position: relative;
     padding-left: 30px;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .task label::before {
@@ -113,7 +146,11 @@ body {
     border: 1px solid #888;
     left: 0;
     top: 50%;
-    margin-top: -16px;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -123,31 +160,23 @@ body {
 
 .task label::after {
     content: "";
-    position: absolute;
-    color: #0075ff;
-    left: 0px;
-    top: 50%;
-    width: 12px;
-    height: 12px;
-    content: "";
-    position: absolute;
     background-color: #0075ff;
-    left: 2.5px;
+    position: absolute;
+    left: 3px;
     top: 50%;
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    margin-top: -12.5px;
-    transform: scale(0) rotate(360deg);
-    -webkit-transform: scale(0) rotate(360deg);
-    -moz-transform: scale(0) rotate(360deg);
-    -ms-transform: scale(0) rotate(360deg);
-    -o-transform: scale(0) rotate(360deg);
     transition: 0.3s;
     -webkit-transition: 0.3s;
     -moz-transition: 0.3s;
     -ms-transition: 0.3s;
     -o-transition: 0.3s;
+    transform: translateY(-50%) scale(0) rotate(360deg);
+    -webkit-transform: translateY(-50%) scale(0) rotate(360deg);
+    -moz-transform: translateY(-50%) scale(0) rotate(360deg);
+    -ms-transform: translateY(-50%) scale(0) rotate(360deg);
+    -o-transform: translateY(-50%) scale(0) rotate(360deg);
 }
 
 .task input[type="checkbox"]:checked + label {
@@ -160,22 +189,26 @@ body {
 }
 
 .task input[type="checkbox"]:checked + label::after {
-    transform: scale(1);
-    -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    -o-transform: scale(1);
+    transform: translateY(-50%) scale(1);
+    -webkit-transform: translateY(-50%) scale(1);
+    -moz-transform: translateY(-50%) scale(1);
+    -ms-transform: translateY(-50%) scale(1);
+    -o-transform: translateY(-50%) scale(1);
 }
 
-.task .icon-control > *{
+.task .icon-control > * {
     width: 25px;
     margin: 10px 8px;
     cursor: pointer;
     opacity: 0.7;
     transition: .3s;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
 }
 
-.task .icon-control > *:hover{
+.task .icon-control > *:hover {
     opacity: 1;
     filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.507));
 }
