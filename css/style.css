@@ -167,26 +167,15 @@ body {
     -o-transform: scale(1);
 }
 
-.task img {
-    width: 35px;
+.task .icon-control > *{
+    width: 25px;
+    margin: 10px 8px;
     cursor: pointer;
-    transition: 0.3s;
-    -webkit-transition: 0.3s;
-    -moz-transition: 0.3s;
-    -ms-transition: 0.3s;
-    -o-transition: 0.3s;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-}
-
-.task img.delete {
-    margin-right: 15px;
-}
-
-.task img:hover {
-    box-shadow: 0px 0px 6px 0px #000000bf;
     opacity: 0.7;
+    transition: .3s;
+}
+
+.task .icon-control > *:hover{
+    opacity: 1;
+    filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.507));
 }
